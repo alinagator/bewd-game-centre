@@ -1,14 +1,15 @@
 <% if @result == "wins" %>
 	<h1>CONGRATS! YOU WON!</h1>
-	<h3>The secret number was <%=@secret_number%></h3>
+	<h3>Computer guess: <%=@computer_guess%> Your guess: <%=@player_guess%></h3>
 	<p><%= image_tag 'games/cat-wins.gif' %></p>
 <% elsif @result == "draw" %>
 	<h1>You drew</h1>
 <% else %>
 	<h1>Sorry, you lose...</h1>
 	<p><%= image_tag 'games/loser.gif' %></p>
+	<p><%= puts @player_guess.class, @computer_guess %></p>
 <% end %>
 
 <p>
-	<h3><%= link_to "PLAY AGAIN", new_rock_paper_scissors_path %></h3>
+	<h3><%= link_to "PLAY AGAIN", new_rock_paper_scissor_path %></h3>
 </p>
