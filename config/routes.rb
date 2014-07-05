@@ -8,9 +8,7 @@ Rails.application.routes.draw do
 
   get '/rock_paper_scissors', to: 'rock_paper_scissors#new'
 
-  resources :rock_paper_scissors, :only => [:new, :show]
-
-
+  resources :rock_paper_scissors, :only => [:new, :show, :id]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
